@@ -1,25 +1,198 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="O7O-aP-PZL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Product View Controller-->
+        <scene sceneID="P0Z-SQ-tgB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v8e-wn-9g2" customClass="ProductViewController" customModule="OldGoodPhone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="eJI-AY-FZK"/>
+                        <viewControllerLayoutGuide type="bottom" id="KYZ-bE-6yx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="PeQ-w5-6AK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mKR-qV-DkZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yu-9W-Ki8">
+                                <rect key="frame" x="20" y="140" width="335" height="39"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-MI-Tmk">
+                                <rect key="frame" x="81" y="229" width="212" height="41"/>
+                                <state key="normal" image="button-addtocart"/>
+                                <connections>
+                                    <action selector="AddToCartPressed:" destination="v8e-wn-9g2" eventType="touchUpInside" id="jzA-az-z8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Wj3-5u-vWd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="productImageView" destination="mKR-qV-DkZ" id="ibt-PF-ynA"/>
+                        <outlet property="productNameLabel" destination="6Yu-9W-Ki8" id="ebr-c9-iBJ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaH-sI-mjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1553.5" y="325.5"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="Qy2-vI-8RQ">
+            <objects>
+                <viewController id="RRC-ng-umQ" customClass="ContactViewController" customModule="OldGoodPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7qM-ib-eCQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oD4-bn-PTr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fWS-1H-CPY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="pJS-J0-Vlg" id="ll6-fu-T6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKe-0M-60g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="pJS-J0-Vlg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header-contact" translatesAutoresizingMaskIntoConstraints="NO" id="9mk-in-rEg">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-h8-CZx">
+                            <rect key="frame" x="8" y="193" width="359" height="38"/>
+                            <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Z-aa-XxT">
+                            <rect key="frame" x="8" y="591" width="359" height="38"/>
+                            <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Normally they are a boring, self-serving mix of me me me and us us us. But a they are so vital to your business. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4Q-gb-V1c">
+                            <rect key="frame" x="58" y="271" width="255" height="94"/>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KO-4M-Mdu">
+                            <rect key="frame" x="58" y="378" width="255" height="167"/>
+                            <string key="text">I need to start this article by qualifying what makes an amazing About Us page. The reason for this is that some About Us pages look amazing but have terrible content whilst others look terrible but grab your attention immediately. </string>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Hands-free phones available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOP-ZS-a6D">
+                            <rect key="frame" x="58" y="553" width="255" height="30"/>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Italic" family="Iowan Old Style" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-email" translatesAutoresizingMaskIntoConstraints="NO" id="nXS-K1-DLv">
+                            <rect key="frame" x="70" y="630" width="34" height="34"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-website" translatesAutoresizingMaskIntoConstraints="NO" id="LJH-rX-ao6">
+                            <rect key="frame" x="70" y="714" width="34" height="34"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-phone" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-95-din">
+                            <rect key="frame" x="70" y="672" width="34" height="34"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fgcui@outlook.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-Qd-eS9">
+                            <rect key="frame" x="127" y="636" width="178" height="21"/>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="18192511303" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7U-er-S11">
+                            <rect key="frame" x="127" y="678" width="178" height="21"/>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.cuifugang.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-4U-2o9">
+                            <rect key="frame" x="127" y="720" width="178" height="21"/>
+                            <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </scrollView>
+            </objects>
+            <point key="canvasLocation" x="552.5" y="-416.5"/>
+        </scene>
+        <!--Products Table View Controller-->
+        <scene sceneID="xEZ-3f-Ha8">
+            <objects>
+                <tableViewController id="1DZ-Xm-3U6" customClass="ProductsTableViewController" customModule="OldGoodPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="112" sectionHeaderHeight="18" sectionFooterHeight="18" id="4qd-nP-0Si">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="112" id="erQ-hB-qhw">
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="112"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erQ-hB-qhw" id="eQu-fx-2co">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="111.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="v8e-wn-9g2" kind="push" identifier="ShowProduct" id="wei-Cm-Cqw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1DZ-Xm-3U6" id="NLl-L4-G8F"/>
+                            <outlet property="delegate" destination="1DZ-Xm-3U6" id="iNW-ok-KKo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YfO-vB-fZX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xL9-ha-a8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.5" y="325.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S0V-y4-nMO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O7O-aP-PZL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZRl-yS-ZJz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1DZ-Xm-3U6" kind="relationship" relationship="rootViewController" id="Vi8-uY-JKR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDO-h5-CVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-addtocart" width="158" height="41"/>
+        <image name="header-contact" width="375" height="125"/>
+        <image name="icon-about-email" width="34" height="34"/>
+        <image name="icon-about-phone" width="34" height="34"/>
+        <image name="icon-about-website" width="34" height="34"/>
+    </resources>
 </document>
